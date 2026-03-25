@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Tracker Spreadsheet | Excel & Google Sheets | Instant Download</title>
+<meta name="description" content="Take control of your money with this monthly budget tracker for Excel and Google Sheets. 12 monthly tabs, savings goals, debt tracker. Instant download. €9.95.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a18;
+    --ink2: #3d3d3a;
+    --ink3: #6b6b67;
+    --paper: #faf9f6;
+    --cream: #f2efe8;
+    --accent: #2d6a4f;
+    --accent-light: #d8f3dc;
+    --accent-mid: #52b788;
+    --warm: #e76f51;
+    --border: rgba(26,26,24,0.12);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand { font-family: var(--serif); font-size: 17px; color: var(--ink); text-decoration: none; }
+  .nav-cta {
+    background: var(--accent); color: #fff;
+    border: none; border-radius: 6px;
+    padding: 9px 20px; font-family: var(--sans); font-size: 13px; font-weight: 500;
+    cursor: pointer; text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: #235c43; }
+
+  /* HERO */
+  .hero {
+    max-width: 680px; margin: 0 auto;
+    padding: 80px 24px 64px;
+    text-align: center;
+  }
+  .hero-label {
+    display: inline-block;
+    background: var(--accent-light); color: var(--accent);
+    font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 100px;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero p {
+    font-size: 18px; color: var(--ink2); line-height: 1.65;
+    max-width: 520px; margin: 0 auto 36px;
+    font-weight: 300;
+  }
+  .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent); color: #fff;
+    font-family: var(--sans); font-size: 16px; font-weight: 500;
+    padding: 16px 36px; border-radius: 8px;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-primary:hover { background: #235c43; transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+  .hero-meta { font-size: 13px; color: var(--ink3); }
+  .hero-meta span { margin: 0 8px; }
+
+  /* MOCKUP */
+  .mockup-wrap {
+    max-width: 840px; margin: 0 auto;
+    padding: 0 24px 72px;
+  }
+  .mockup-frame {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 28px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  }
+  .mockup-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .mockup-card-label { font-size: 11px; color: var(--ink3); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .mockup-card-value { font-family: var(--serif); font-size: 24px; color: var(--ink); }
+  .mockup-card-value.green { color: var(--accent); }
+  .mockup-card-value.red { color: var(--warm); }
+  .mockup-bar {
+    grid-column: 1 / -1;
+    background: #fff; border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px;
+  }
+  .mockup-bar-label { font-size: 12px; color: var(--ink3); margin-bottom: 10px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .bar-name { font-size: 12px; color: var(--ink2); min-width: 80px; }
+  .bar-track { flex: 1; height: 6px; background: var(--cream); border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; background: var(--accent-mid); }
+  .bar-amount { font-size: 12px; color: var(--ink3); min-width: 48px; text-align: right; }
+
+  /* PROBLEM */
+  .section { max-width: 680px; margin: 0 auto; padding: 64px 24px; }
+  .section-label {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink3); margin-bottom: 20px;
+  }
+  .section h2 {
+    font-family: var(--serif); font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2; margin-bottom: 24px;
+  }
+  .section p { color: var(--ink2); font-size: 17px; line-height: 1.75; margin-bottom: 16px; font-weight: 300; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); max-width: 840px; margin: 0 auto; }
+
+  /* FEATURES */
+  .features-wrap { max-width: 840px; margin: 0 auto; padding: 64px 24px; }
+  .features-heading { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 36px); margin-bottom: 40px; text-align: center; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .feature-item {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 20px;
+  }
+  .feature-check {
+    width: 28px; height: 28px;
+    background: var(--accent-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 12px;
+  }
+  .feature-check svg { width: 14px; height: 14px; stroke: var(--accent); }
+  .feature-item strong { display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: var(--ink); }
+  .feature-item span { font-size: 13px; color: var(--ink3); line-height: 1.5; }
+
+  /* FOR WHO */
+  .forwho-wrap { max-width: 680px; margin: 0 auto; padding: 64px 24px; }
+  .forwho-wrap h2 { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 36px); margin-bottom: 32px; }
+  .forwho-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .forwho-list li {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 16px; color: var(--ink2); font-weight: 300; line-height: 1.6;
+  }
+  .forwho-arrow {
+    flex-shrink: 0; margin-top: 3px;
+    width: 20px; height: 20px;
+    background: var(--accent-light); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .forwho-arrow svg { width: 10px; height: 10px; stroke: var(--accent); }
+
+  /* WHAT YOU GET */
+  .get-wrap {
+    max-width: 840px; margin: 0 auto; padding: 64px 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+  }
+  .get-wrap h2 { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 36px); margin-bottom: 24px; }
+  .get-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .get-list li { display: flex; gap: 12px; font-size: 15px; color: var(--ink2); font-weight: 300; }
+  .get-list li::before { content: '•'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+  .get-box {
+    background: var(--cream); border: 1px solid var(--border); border-radius: 12px;
+    padding: 32px; text-align: center;
+  }
+  .get-price { font-family: var(--serif); font-size: 52px; color: var(--ink); margin-bottom: 4px; }
+  .get-price-note { font-size: 13px; color: var(--ink3); margin-bottom: 24px; }
+  .btn-buy {
+    display: block; width: 100%;
+    background: var(--accent); color: #fff;
+    font-family: var(--sans); font-size: 15px; font-weight: 500;
+    padding: 15px; border-radius: 8px;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: background 0.2s; margin-bottom: 12px;
+  }
+  .btn-buy:hover { background: #235c43; }
+  .get-assurance { font-size: 12px; color: var(--ink3); line-height: 1.6; }
+
+  /* EMAIL */
+  .email-wrap {
+    background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .email-inner { max-width: 580px; margin: 0 auto; padding: 64px 24px; text-align: center; }
+  .email-inner h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); margin-bottom: 12px; }
+  .email-inner p { font-size: 16px; color: var(--ink2); margin-bottom: 28px; font-weight: 300; }
+  .email-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto 10px; }
+  .email-form input {
+    flex: 1; padding: 13px 16px; border: 1px solid var(--border); border-radius: 8px;
+    font-family: var(--sans); font-size: 14px; background: #fff; color: var(--ink);
+    outline: none;
+  }
+  .email-form input:focus { border-color: var(--accent); }
+  .email-form button {
+    background: var(--ink); color: #fff;
+    border: none; border-radius: 8px; padding: 13px 20px;
+    font-family: var(--sans); font-size: 14px; font-weight: 500; cursor: pointer;
+    white-space: nowrap; transition: background 0.2s;
+  }
+  .email-form button:hover { background: var(--accent); }
+  .email-note { font-size: 12px; color: var(--ink3); }
+
+  /* FAQ */
+  .faq-wrap { max-width: 640px; margin: 0 auto; padding: 64px 24px; }
+  .faq-wrap h2 { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 36px); margin-bottom: 36px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+  .faq-q { font-weight: 500; font-size: 15px; color: var(--ink); margin-bottom: 10px; }
+  .faq-a { font-size: 15px; color: var(--ink2); line-height: 1.7; font-weight: 300; }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: var(--ink); color: #fff;
+    text-align: center; padding: 80px 24px;
+  }
+  .final-cta h2 { font-family: var(--serif); font-size: clamp(28px, 4vw, 44px); margin-bottom: 12px; color: #fff; }
+  .final-cta p { font-size: 17px; color: rgba(255,255,255,0.6); margin-bottom: 36px; font-weight: 300; }
+  .btn-final {
+    display: inline-block;
+    background: var(--accent-mid); color: #fff;
+    font-family: var(--sans); font-size: 16px; font-weight: 500;
+    padding: 16px 40px; border-radius: 8px;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .btn-final:hover { background: var(--accent); }
+  .final-meta { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 24px;
+    font-size: 13px; color: var(--ink3);
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .mockup-frame { grid-template-columns: 1fr 1fr; }
+    .get-wrap { grid-template-columns: 1fr; }
+    .email-form { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="#">Framed Wise</a>
+  <a class="nav-cta" href="#buy">Get it for €9.95</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-label">Instant download · Excel &amp; Google Sheets</span>
+  <h1>Stop wondering<br><em>where your money went</em></h1>
+  <p>A simple monthly budget tracker that gives you a clear, honest picture of your finances — in about 15 minutes a month.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="#buy">Get the Budget Tracker — €9.95</a>
+    <span class="hero-meta">
+      <span>No subscription</span>·
+      <span>Instant download</span>·
+      <span>Yours forever</span>
+    </span>
+  </div>
+</section>
+
+<!-- MOCKUP -->
+<div class="mockup-wrap">
+  <div class="mockup-frame">
+    <div class="mockup-card">
+      <div class="mockup-card-label">Monthly income</div>
+      <div class="mockup-card-value green">€3,240</div>
+    </div>
+    <div class="mockup-card">
+      <div class="mockup-card-label">Total expenses</div>
+      <div class="mockup-card-value red">€2,180</div>
+    </div>
+    <div class="mockup-card">
+      <div class="mockup-card-label">Left over</div>
+      <div class="mockup-card-value">€1,060</div>
+    </div>
+    <div class="mockup-bar">
+      <div class="mockup-bar-label">Spending by category</div>
+      <div class="bar-row">
+        <span class="bar-name">Housing</span>
+        <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+        <span class="bar-amount">€900</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-name">Groceries</span>
+        <div class="bar-track"><div class="bar-fill" style="width:38%"></div></div>
+        <span class="bar-amount">€320</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-name">Transport</span>
+        <div class="bar-track"><div class="bar-fill" style="width:24%"></div></div>
+        <span class="bar-amount">€180</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-name">Subscriptions</span>
+        <div class="bar-track"><div class="bar-fill" style="width:18%"></div></div>
+        <span class="bar-amount">€95</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PROBLEM -->
+<section class="section">
+  <p class="section-label">Sound familiar?</p>
+  <h2>You earn enough. So why does it feel like there's never anything left?</h2>
+  <p>It's the end of the month and the numbers don't add up. You meant to track your spending but life got in the way. You've tried apps that are too complicated, notebooks that get lost, and spreadsheets that never quite worked.</p>
+  <p>The result? A vague sense of financial guilt and the same conversation with yourself every month — starting over, again.</p>
+</section>
+
+<hr class="divider">
+
+<!-- FEATURES -->
+<div class="features-wrap">
+  <h2 class="features-heading">Everything you need. Nothing you don't.</h2>
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-check"><svg fill="none" viewBox="0 0 14 14"><polyline points="2,7 5.5,10.5 12,3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <strong>12 monthly tabs</strong>
+      <span>One for each month, pre-formatted and ready to fill in.</span>
+    </div>
+    <div class="feature-item">
+      <div class="feature-check"><svg fill="none" viewBox="0 0 14 14"><polyline points="2,7 5.5,10.5 12,3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <strong>Annual overview dashboard</strong>
+      <span>Automatic yearly summary — no extra formulas needed.</span>
+    </div>
+    <div class="feature-item">
+      <div class="feature-check"><svg fill="none" viewBox="0 0 14 14"><polyline points="2,7 5.5,10.5 12,3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <strong>Savings goals tracker</strong>
+      <span>Set your target, watch your progress grow month by month.</span>
+    </div>
+    <div class="feature-item">
+      <div class="feature-check"><svg fill="none" viewBox="0 0 14 14"><polyline points="2,7 5.5,10.5 12,3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <strong>Debt tracker</strong>
+      <span>See exactly what you owe and when you'll be free.</span>
+    </div>
+    <div class="feature-item">
+      <div class="feature-check"><svg fill="none" viewBox="0 0 14 14"><polyline points="2,7 5.5,10.5 12,3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <strong>Excel &amp; Google Sheets</strong>
+      <span>Works in both. Use whatever you already have — for free.</span>
+    </div>
+    <div class="feature-item">
+      <div class="feature-check"><svg fill="none" viewBox="0 0 14 14"><polyline points="2,7 5.5,10.5 12,3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <strong>Bonus checklist included</strong>
+      <span>7-step financial reset checklist — free with every purchase.</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- FOR WHO -->
+<section class="forwho-wrap">
+  <h2>This is for you if…</h2>
+  <ul class="forwho-list">
+    <li>
+      <span class="forwho-arrow"><svg fill="none" viewBox="0 0 10 10"><polyline points="2,5 5,8 8,2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      You want to stop guessing and start knowing where your money goes
+    </li>
+    <li>
+      <span class="forwho-arrow"><svg fill="none" viewBox="0 0 10 10"><polyline points="2,5 5,8 8,2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      You're a freelancer or self-employed and need to track income and expenses
+    </li>
+    <li>
+      <span class="forwho-arrow"><svg fill="none" viewBox="0 0 10 10"><polyline points="2,5 5,8 8,2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      You're working toward a savings goal or paying off debt
+    </li>
+    <li>
+      <span class="forwho-arrow"><svg fill="none" viewBox="0 0 10 10"><polyline points="2,5 5,8 8,2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      You've tried budgeting apps but prefer something you actually own and control
+    </li>
+    <li>
+      <span class="forwho-arrow"><svg fill="none" viewBox="0 0 10 10"><polyline points="2,5 5,8 8,2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      You want something simple — not a financial degree
+    </li>
+  </ul>
+</section>
+
+<hr class="divider">
+
+<!-- WHAT YOU GET + BUY -->
+<div class="get-wrap" id="buy">
+  <div>
+    <h2>What's included in your download</h2>
+    <ul class="get-list">
+      <li>1 × Excel file (.xlsx) — opens in Excel and Google Sheets</li>
+      <li>1 × PDF instruction guide — step-by-step in plain language</li>
+      <li>1 × 7-step financial reset checklist (bonus PDF)</li>
+      <li>Instant delivery by email after purchase</li>
+      <li>No account required. No subscription. Yours forever.</li>
+    </ul>
+  </div>
+  <div class="get-box">
+    <div class="get-price">€9.95</div>
+    <div class="get-price-note">One-time payment · instant download</div>
+    <a class="btn-buy" href="JOUW_SYSTEME_IO_CHECKOUT_LINK">Get the Budget Tracker →</a>
+    <div class="get-assurance">
+      Excel &amp; Google Sheets · No subscription<br>
+      Digital download · Delivered instantly
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- EMAIL LEAD MAGNET -->
+<div class="email-wrap">
+  <div class="email-inner">
+    <h2>Not ready yet? Start here for free.</h2>
+    <p>Download the free 7-Step Financial Reset Checklist and start getting a grip on your money today — no purchase needed.</p>
+    <form class="email-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email address">
+      <button type="submit">Send it →</button>
+    </form>
+    <p class="email-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-wrap">
+  <h2>Quick answers</h2>
+  <div class="faq-item">
+    <p class="faq-q">Do I need Microsoft Excel to use this?</p>
+    <p class="faq-a">No. The file works in both Microsoft Excel (2016 or newer) and Google Sheets, which is completely free. Just upload the .xlsx file to Google Drive and open it in Google Sheets.</p>
+  </div>
+  <div class="faq-item">
+    <p class="faq-q">Is this a subscription?</p>
+    <p class="faq-a">No. You pay once and the file is yours forever. No monthly fees, no account needed after purchase.</p>
+  </div>
+  <div class="faq-item">
+    <p class="faq-q">How quickly will I receive it?</p>
+    <p class="faq-a">Instantly. As soon as your payment is confirmed you'll receive a download link by email.</p>
+  </div>
+  <div class="faq-item">
+    <p class="faq-q">I'm not great with spreadsheets. Will I manage?</p>
+    <p class="faq-a">Yes. Everything is pre-formatted — you just type your numbers in. The instruction tab walks you through setup in plain language. If you can type a number into a cell, you can use this.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Ready to know where your money goes?</h2>
+  <p>One purchase. One download. Yours forever.</p>
+  <a class="btn-final" href="#buy">Get the Budget Tracker — €9.95</a>
+  <p class="final-meta">Instant download · Excel + Google Sheets · No subscription</p>
+</section>
+
+<footer>
+  &copy; 2026 Framed Wise · <a href="#" style="color:inherit;">Privacy</a>
+</footer>
+
+</body>
+</html>
