@@ -3,289 +3,682 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ═══ SEO ═══ -->
-  <title>Cashflow Tracker voor ZZP & MKB | Onedion Consultancy</title>
-  <meta name="description" content="Praktische tools voor ZZP'ers en MKB-eigenaren. Cashflow tracker, kosten tracker, AI-prompt toolkit en NIS2 consultancy. Eenmalig betalen, direct downloaden. Vanaf €9,95.">
-  <meta name="keywords" content="cashflow tracker ZZP, kosten tracker MKB, Excel tool ondernemer, financieel overzicht ZZP, periodieke kosten bijhouden, AI prompts ondernemer, NIS2 MKB, ketenaansprakelijkheid NIS2">
+  <meta name="robots" content="index, follow">
+  <title>Grip op je bedrijf | Onedion Consultancy</title>
+  <meta name="description" content="Praktische tools voor ZZP'ers en MKB-eigenaren die financieel inzicht willen — zonder accountant, zonder abonnement, zonder gedoe.">
+  <meta name="keywords" content="cashflow tracker zzp, periodieke kosten tracker, schulden tracker ondernemer, AI prompt toolkit, NIS2 MKB, financieel overzicht ondernemer">
   <link rel="canonical" href="https://ancient2021.github.io/Onedion_Consultancy_Landing/">
 
-  <!-- ═══ Open Graph ═══ -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Grip op je bedrijf | Onedion Consultancy">
-  <meta property="og:description" content="Cashflow tracker, kosten tracker, AI-prompt toolkit en NIS2 consultancy voor ZZP en MKB. Eenmalig betalen, direct downloaden.">
+  <meta property="og:description" content="Praktische tools voor ZZP'ers en MKB-eigenaren die financieel inzicht willen — zonder accountant, zonder abonnement, zonder gedoe.">
   <meta property="og:url" content="https://ancient2021.github.io/Onedion_Consultancy_Landing/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="nl_NL">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cashflow Tracker voor ZZP & MKB | Onedion Consultancy">
-  <meta name="twitter:description" content="Praktische tools voor ondernemers. Geen abonnement, direct downloaden.">
 
-  <!-- ═══ Structured Data ═══ -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Onedion Consultancy","url":"https://ancient2021.github.io/Onedion_Consultancy_Landing/","description":"Zakelijke tools en NIS2 consultancy voor ZZP'ers en MKB-eigenaren","areaServed":"NL","contactPoint":{"@type":"ContactPoint","email":"onedionconsultancy@gmail.com","contactType":"customer service"}}
-  </script>
-  <script type="application/ld+json">
-  [{"@context":"https://schema.org","@type":"Product","name":"Cashflow & Expense Tracker","description":"Maandelijks overzicht van inkomsten, uitgaven en winst in Excel.","offers":{"@type":"Offer","price":"19.95","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://euroflux8.gumroad.com/l/stues"}},{"@context":"https://schema.org","@type":"Product","name":"Periodieke Kosten Tracker","description":"Overzicht van alle terugkerende kosten en abonnementen.","offers":{"@type":"Offer","price":"9.95","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://euroflux8.gumroad.com/l/glpzf"}},{"@context":"https://schema.org","@type":"Product","name":"AI-Prompt Toolkit voor Ondernemers","description":"50 kant-en-klare AI-prompts voor ondernemers.","offers":{"@type":"Offer","price":"24.95","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://euroflux8.gumroad.com/l/ai-prompt-toolkit"}},{"@context":"https://schema.org","@type":"Product","name":"Zakelijke Financiën Bundel","description":"Cashflow Tracker én Periodieke Kosten Tracker als compleet pakket.","offers":{"@type":"Offer","price":"17.95","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://euroflux8.gumroad.com/l/hwhfnd"}}]
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Onedion Consultancy",
+    "url": "https://ancient2021.github.io/Onedion_Consultancy_Landing/",
+    "email": "onedionconsultancy@gmail.com",
+    "description": "Praktische tools voor ZZP'ers en MKB-eigenaren",
+    "areaServed": "NL"
+  }
   </script>
 
-  <!-- ═══ Fonts ═══ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Sitemap hint -->
+  <link rel="sitemap" type="application/xml" href="/Onedion_Consultancy_Landing/sitemap.xml">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --green:   #4A7C6F;
-      --green2:  #3D6B5E;
-      --green3:  #2E5D52;
-      --dark:    #1A1A2E;
-      --cream:   #FAFAF7;
-      --warm:    #F5F0E8;
-      --mid:     #8A9A90;
-      --light:   #D8E4DF;
-      --white:   #ffffff;
+      --navy: #1a2332;
+      --navy-light: #243044;
+      --slate: #3d5270;
+      --accent: #2d7dd2;
+      --accent-light: #4a9fe8;
+      --green: #27ae60;
+      --green-light: #2ecc71;
+      --amber: #f39c12;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-600: #475569;
+      --text: #1e293b;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; }
 
-    /* ── NAV ── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
     nav {
-      position: sticky; top: 0; z-index: 100;
-      background: var(--dark);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5%; height: 64px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      background: var(--navy);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
     }
-    .nav-brand { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--white); letter-spacing: -0.3px; }
-    .nav-brand span { color: var(--green); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { color: var(--mid); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta { background: var(--green); color: white; padding: 9px 22px; border-radius: 8px; text-decoration: none; font-size: 0.88rem; font-weight: 600; transition: background 0.2s; }
-    .nav-cta:hover { background: var(--green2); }
 
-    /* ── HERO ── */
-    .hero {
-      background: var(--dark);
-      padding: 100px 5% 80px;
-      position: relative; overflow: hidden;
+    .nav-brand {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: -0.02em;
     }
+
+    .nav-brand span { color: var(--accent-light); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 500 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-light) !important; color: var(--white) !important; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, var(--slate) 100%);
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
     .hero::before {
       content: '';
-      position: absolute; top: -60px; right: -80px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(74,124,111,0.2) 0%, transparent 70%);
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 60% 40%, rgba(45,125,210,0.15) 0%, transparent 60%);
       pointer-events: none;
     }
-    .hero-inner { max-width: 720px; position: relative; z-index: 1; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(74,124,111,0.15); border: 1px solid rgba(74,124,111,0.4);
-      color: var(--green); padding: 6px 16px; border-radius: 20px;
-      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px;
-      text-transform: uppercase; margin-bottom: 28px;
-    }
-    .hero h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      color: var(--white); line-height: 1.15;
+
+    .hero-label {
+      display: inline-block;
+      background: rgba(45,125,210,0.2);
+      border: 1px solid rgba(45,125,210,0.4);
+      color: var(--accent-light);
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
       margin-bottom: 24px;
     }
-    .hero h1 em { color: var(--green); font-style: italic; }
-    .hero p { font-size: 1.1rem; color: #9AADA6; max-width: 560px; margin-bottom: 40px; line-height: 1.7; }
-    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
     .btn-primary {
-      background: var(--green); color: white;
-      padding: 14px 28px; border-radius: 10px;
-      text-decoration: none; font-weight: 700; font-size: 0.95rem;
-      transition: all 0.2s; display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(45,125,210,0.4);
     }
-    .btn-primary:hover { background: var(--green2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(74,124,111,0.4); }
+
+    .btn-primary:hover {
+      background: var(--accent-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(45,125,210,0.5);
+    }
+
     .btn-ghost {
-      background: transparent; color: var(--mid);
-      border: 1px solid #2A2A45;
-      padding: 14px 28px; border-radius: 10px;
-      text-decoration: none; font-weight: 500; font-size: 0.95rem;
-      transition: all 0.2s; display: inline-block;
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 15px;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: all 0.2s;
     }
-    .btn-ghost:hover { border-color: var(--green); color: var(--white); }
 
-    /* ── STATS ── */
-    .stats {
-      background: var(--green3);
-      padding: 28px 5%;
-      display: flex; gap: 0; justify-content: center;
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.5);
+      color: var(--white);
     }
-    .stat { text-align: center; padding: 0 40px; border-right: 1px solid rgba(255,255,255,0.15); }
-    .stat:last-child { border-right: none; }
-    .stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--white); display: block; }
-    .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; }
 
-    /* ── SECTIONS ── */
-    section { padding: 80px 5%; }
-    .section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--green); margin-bottom: 12px; }
-    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--dark); margin-bottom: 16px; line-height: 1.2; }
-    .section-sub { font-size: 1rem; color: var(--mid); max-width: 520px; line-height: 1.7; margin-bottom: 48px; }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
 
-    /* ── PROBLEMS ── */
-    .problems { background: var(--warm); }
-    .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-value {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--white);
+      display: block;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .hero-stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* PROBLEM SECTION */
+    .section {
+      padding: 80px 40px;
+    }
+
+    .section-alt { background: var(--off-white); }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 48px;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
     .problem-card {
-      background: var(--white); border-radius: 16px;
-      padding: 28px; border-left: 4px solid var(--green);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
     }
-    .problem-icon { font-size: 1.8rem; margin-bottom: 14px; }
-    .problem-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
-    .problem-card p { font-size: 0.88rem; color: var(--mid); line-height: 1.6; }
 
-    /* ── PRODUCTS ── */
-    .products { background: var(--cream); }
-    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .problem-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .problem-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .problem-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* PRODUCTS */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
     .product-card {
-      background: var(--white); border-radius: 20px;
-      padding: 32px; border: 1px solid var(--light);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      display: flex; flex-direction: column;
-      transition: all 0.25s;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
       position: relative;
     }
-    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(74,124,111,0.15); border-color: var(--green); }
-    .product-card.featured { border: 2px solid var(--green); }
+
+    .product-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
     .product-badge {
-      position: absolute; top: -12px; left: 28px;
-      background: var(--green); color: white;
-      font-size: 0.72rem; font-weight: 700; padding: 4px 14px;
-      border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
     }
-    .product-icon { font-size: 2.2rem; margin-bottom: 18px; }
-    .product-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 10px; color: var(--dark); }
-    .product-card p { font-size: 0.88rem; color: var(--mid); line-height: 1.65; margin-bottom: 20px; flex: 1; }
-    .product-features { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px; }
-    .product-features li { font-size: 0.84rem; color: var(--dark); display: flex; align-items: flex-start; gap: 8px; }
-    .product-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-    .product-price { font-family: 'DM Serif Display', serif; font-size: 1.8rem; color: var(--dark); margin-bottom: 6px; }
-    .product-price-note { font-size: 0.78rem; color: var(--mid); margin-bottom: 20px; }
-    .product-price-old { font-size: 0.9rem; color: var(--mid); text-decoration: line-through; margin-right: 6px; }
-    .btn-product {
-      background: var(--green); color: white;
-      padding: 13px 24px; border-radius: 10px;
-      text-decoration: none; font-weight: 600; font-size: 0.9rem;
-      text-align: center; transition: all 0.2s; display: block;
-    }
-    .btn-product:hover { background: var(--green2); }
-    .btn-product-outline {
-      background: transparent; color: var(--green);
-      border: 2px solid var(--green);
-      padding: 11px 24px; border-radius: 10px;
-      text-decoration: none; font-weight: 600; font-size: 0.9rem;
-      text-align: center; transition: all 0.2s; display: block; margin-top: 10px;
-    }
-    .btn-product-outline:hover { background: var(--green); color: white; }
 
-    /* ── HOW IT WORKS ── */
-    .howitworks { background: var(--dark); }
-    .howitworks .section-title { color: var(--white); }
-    .howitworks .section-sub { color: #7A9A90; }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
-    .step { text-align: center; padding: 24px; }
-    .step-num {
-      width: 52px; height: 52px; border-radius: 50%;
-      background: var(--green); color: white;
-      font-family: 'DM Serif Display', serif; font-size: 1.4rem;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-    }
-    .step h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-    .step p { font-size: 0.85rem; color: #7A9A90; line-height: 1.6; }
+    .badge-new { background: #fef3c7; color: #92400e; }
+    .badge-popular { background: #dcfce7; color: #166534; }
+    .badge-bundle { background: #ede9fe; color: #5b21b6; }
+    .badge-html { background: #dbeafe; color: #1e40af; }
 
-    /* ── NIS2 STRIP ── */
+    .product-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .product-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .product-features {
+      list-style: none;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .product-features li {
+      font-size: 13px;
+      color: var(--gray-600);
+      padding: 5px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .product-features li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .product-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .product-price {
+      font-family: 'Fraunces', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--navy);
+    }
+
+    .product-price-old {
+      font-size: 14px;
+      color: var(--gray-400);
+      text-decoration: line-through;
+      margin-left: 6px;
+    }
+
+    .product-price-label {
+      font-size: 12px;
+      color: var(--gray-400);
+    }
+
+    .btn-buy {
+      display: block;
+      text-align: center;
+      background: var(--navy);
+      color: var(--white);
+      padding: 13px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-buy:hover {
+      background: var(--slate);
+      transform: translateY(-1px);
+    }
+
+    .btn-buy-accent {
+      background: var(--accent);
+    }
+
+    .btn-buy-accent:hover { background: var(--accent-light); }
+
+    /* HOW IT WORKS */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      position: relative;
+    }
+
+    .step {
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 300;
+      margin: 0 auto 16px;
+    }
+
+    .step h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* NIS2 STRIP */
     .nis2-strip {
-      background: linear-gradient(135deg, var(--green3) 0%, var(--dark) 100%);
-      padding: 60px 5%;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 40px; flex-wrap: wrap;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+      padding: 48px 40px;
+      text-align: center;
     }
-    .nis2-text h2 { font-family: 'DM Serif Display', serif; font-size: 1.8rem; color: var(--white); margin-bottom: 12px; }
-    .nis2-text p { color: #9AADA6; font-size: 0.95rem; max-width: 480px; line-height: 1.6; }
-    .nis2-cta { flex-shrink: 0; }
 
-    /* ── FOR WHO ── */
-    .forwho { background: var(--warm); }
-    .forwho-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .forwho-card {
-      background: var(--white); border-radius: 14px;
-      padding: 24px; text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    .nis2-strip h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 12px;
     }
-    .forwho-icon { font-size: 2.2rem; margin-bottom: 14px; }
-    .forwho-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
-    .forwho-card p { font-size: 0.83rem; color: var(--mid); line-height: 1.6; }
 
-    /* ── FAQ ── */
-    .faq { background: var(--cream); }
-    .faq-list { max-width: 720px; display: flex; flex-direction: column; gap: 12px; }
-    details {
-      background: var(--white); border-radius: 12px;
-      border: 1px solid var(--light); overflow: hidden;
+    .nis2-strip p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      margin: 0 auto 24px;
+      line-height: 1.7;
     }
-    summary {
-      padding: 18px 24px; cursor: pointer;
-      font-weight: 600; font-size: 0.95rem;
-      list-style: none; display: flex; justify-content: space-between; align-items: center;
-    }
-    summary::after { content: '+'; font-size: 1.3rem; color: var(--green); font-weight: 300; }
-    details[open] summary::after { content: '−'; }
-    details p { padding: 0 24px 18px; font-size: 0.88rem; color: var(--mid); line-height: 1.7; }
 
-    /* ── CTA BOTTOM ── */
-    .cta-bottom {
-      background: var(--green); padding: 80px 5%; text-align: center;
+    .nis2-strip a {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
     }
-    .cta-bottom h2 { font-family: 'DM Serif Display', serif; font-size: 2.4rem; color: white; margin-bottom: 16px; }
-    .cta-bottom p { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 36px; }
-    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-white { background: white; color: var(--green); padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: all 0.2s; }
-    .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
-    .btn-white-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); padding: 12px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; }
-    .btn-white-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
 
-    /* ── FOOTER ── */
+    .nis2-strip a:hover { background: rgba(255,255,255,0.25); }
+
+    /* TARGET AUDIENCE */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .audience-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .audience-card .icon { font-size: 28px; margin-bottom: 12px; display: block; }
+    .audience-card h3 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .audience-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 18px 24px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--accent);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-question::after { transform: rotate(45deg); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 18px;
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: var(--navy);
+      padding: 72px 40px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 36px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      background: var(--white);
+      color: var(--navy);
+      padding: 13px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .cta-btn:hover { background: var(--gray-100); transform: translateY(-1px); }
+    .cta-btn.accent { background: var(--accent); color: var(--white); }
+    .cta-btn.accent:hover { background: var(--accent-light); }
+
+    /* FOOTER */
     footer {
-      background: var(--dark); padding: 40px 5%;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 16px;
+      background: #0f1623;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
     }
-    .footer-brand { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--white); }
-    .footer-brand span { color: var(--green); }
-    footer p { font-size: 0.8rem; color: var(--mid); }
-    footer a { color: var(--mid); text-decoration: none; }
+
+    .footer-brand {
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+      color: var(--white);
+    }
+
+    .footer-brand span { color: var(--accent-light); }
+
+    footer p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
     footer a:hover { color: var(--white); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .stats { flex-direction: column; gap: 20px; }
-      .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 16px 0; }
-      .stat:last-child { border-bottom: none; }
-      .nis2-strip { flex-direction: column; }
-      .hero-actions { flex-direction: column; }
-      .cta-buttons { flex-direction: column; align-items: center; }
-    }
+    .footer-links { display: flex; gap: 20px; }
 
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
-    .hero-inner { animation: fadeUp 0.7s ease both; }
-    .product-card { animation: fadeUp 0.5s ease both; }
-    .product-card:nth-child(2) { animation-delay: 0.1s; }
-    .product-card:nth-child(3) { animation-delay: 0.2s; }
-    .product-card:nth-child(4) { animation-delay: 0.3s; }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 56px 20px; }
+      .hero-stats { gap: 28px; }
+      .section { padding: 56px 20px; }
+      .nis2-strip { padding: 40px 20px; }
+      .cta-section { padding: 56px 20px; }
+      footer { padding: 24px 20px; flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
   </style>
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
+<!-- NAV -->
 <nav>
   <div class="nav-brand">Onedion<span>.</span></div>
   <ul class="nav-links">
@@ -293,263 +686,335 @@
     <li><a href="#hoehetwerkt">Hoe het werkt</a></li>
     <li><a href="#nis2">NIS2</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="#producten" class="nav-cta">Bekijk tools →</a></li>
   </ul>
-  <a href="#producten" class="nav-cta">Bekijk tools →</a>
 </nav>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">🏢 Onedion Consultancy</div>
-    <h1>Grip op je bedrijf.<br><em>Eindelijk.</em></h1>
-    <p>Praktische tools voor ZZP'ers en MKB-eigenaren die financieel inzicht willen — zonder accountant, zonder abonnement, zonder gedoe.</p>
-    <div class="hero-actions">
-      <a href="#producten" class="btn-primary">Bekijk alle tools ↓</a>
-      <a href="#hoehetwerkt" class="btn-ghost">Hoe werkt het?</a>
+  <div class="hero-label">🏢 Onedion Consultancy</div>
+  <h1>Grip op je bedrijf. <em>Eindelijk.</em></h1>
+  <p class="hero-sub">Praktische tools voor ZZP'ers en MKB-eigenaren die financieel inzicht willen — zonder accountant, zonder abonnement, zonder gedoe.</p>
+  <div class="hero-buttons">
+    <a href="#producten" class="btn-primary">Bekijk alle tools ↓</a>
+    <a href="#hoehetwerkt" class="btn-ghost">Hoe werkt het?</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-value">5</span>
+      <span class="hero-stat-label">Producten live</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">€9,95</span>
+      <span class="hero-stat-label">Vanaf</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">15 min</span>
+      <span class="hero-stat-label">Setup tijd</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">∞</span>
+      <span class="hero-stat-label">Eenmalig betalen</span>
     </div>
   </div>
 </section>
 
-<!-- ═══ STATS ═══ -->
-<div class="stats">
-  <div class="stat"><span class="stat-num">4</span><span class="stat-label">Producten live</span></div>
-  <div class="stat"><span class="stat-num">€9,95</span><span class="stat-label">Vanaf</span></div>
-  <div class="stat"><span class="stat-num">15 min</span><span class="stat-label">Setup tijd</span></div>
-  <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Eenmalig betalen</span></div>
-</div>
-
-<!-- ═══ PROBLEEM ═══ -->
-<section class="problems" id="probleem">
-  <div class="section-label">Het probleem</div>
-  <h2 class="section-title">Je werkt hard.<br>Maar waar blijft het geld?</h2>
-  <p class="section-sub">Drie herkenbare situaties die elke ondernemer kent — en die je kunt oplossen.</p>
-  <div class="problems-grid">
-    <div class="problem-card">
-      <div class="problem-icon">📊</div>
-      <h3>Geen overzicht van cashflow</h3>
-      <p>Je stuurt facturen maar weet niet precies hoeveel er maandelijks binnenkomt versus eruit gaat. De buffer krimpt zonder dat je weet waarom.</p>
-    </div>
-    <div class="problem-card">
-      <div class="problem-icon">🔄</div>
-      <h3>Vergeten abonnementen stapelen op</h3>
-      <p>Software, tools, platforms — elk €15 per maand lijkt klein. Maar twaalf abonnementen later betaal je €2.100 per jaar aan dingen die je nauwelijks gebruikt.</p>
-    </div>
-    <div class="problem-card">
-      <div class="problem-icon">😨</div>
-      <h3>Ieder kwartaal een verrassing</h3>
-      <p>Belasting, btw-aangifte, verzekeringen — periodieke kosten die je wist dat er aankwamen maar toch altijd verrassen als ze er zijn.</p>
-    </div>
-    <div class="problem-card">
-      <div class="problem-icon">🤖</div>
-      <h3>AI gebruiken maar geen resultaat</h3>
-      <p>Je werkt met ChatGPT of Claude maar de output is generiek. Je weet niet hoe je de juiste vraag stelt om écht bruikbare antwoorden te krijgen.</p>
+<!-- PROBLEM -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-label">Het probleem</div>
+    <h2 class="section-title">Je werkt hard. Maar waar blijft het geld?</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="problem-icon">📊</span>
+        <h3>Geen overzicht van cashflow</h3>
+        <p>Je stuurt facturen maar weet niet precies hoeveel er maandelijks binnenkomt versus eruit gaat. De buffer krimpt zonder dat je weet waarom.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🔄</span>
+        <h3>Vergeten abonnementen stapelen op</h3>
+        <p>Software, tools, platforms — elk €15 per maand lijkt klein. Maar twaalf abonnementen later betaal je €2.100 per jaar aan dingen die je nauwelijks gebruikt.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">😨</span>
+        <h3>Ieder kwartaal een verrassing</h3>
+        <p>Belasting, btw-aangifte, verzekeringen — periodieke kosten die je wist dat er aankwamen maar toch altijd verrassen als ze er zijn.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🤖</span>
+        <h3>AI gebruiken maar geen resultaat</h3>
+        <p>Je werkt met ChatGPT of Claude maar de output is generiek. Je weet niet hoe je de juiste vraag stelt om écht bruikbare antwoorden te krijgen.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PRODUCTEN ═══ -->
-<section class="products" id="producten">
-  <div class="section-label">De tools</div>
-  <h2 class="section-title">Vier tools. Volledig overzicht.</h2>
-  <p class="section-sub">Geen ingewikkelde software, geen leercurve. Open het bestand, vul je cijfers in — en je hebt direct inzicht.</p>
+<!-- PRODUCTS -->
+<section class="section" id="producten">
+  <div class="container">
+    <div class="section-label">De tools</div>
+    <h2 class="section-title">Vijf tools. Volledig overzicht.</h2>
+    <div class="products-grid">
 
-  <div class="products-grid">
+      <!-- Cashflow Tracker -->
+      <div class="product-card">
+        <span class="product-icon">📈</span>
+        <h3>Cashflow & Expense Tracker</h3>
+        <p>Maandelijks overzicht van inkomsten, uitgaven en winst. Weet altijd precies wat er binnenkomt en eruit gaat.</p>
+        <ul class="product-features">
+          <li>12 maandtabbladen — één per maand</li>
+          <li>Automatisch jaardashboard met totalen</li>
+          <li>Categorieën voor zakelijke kosten</li>
+          <li>Winst per maand direct zichtbaar</li>
+          <li>Werkt in Excel én Google Sheets</li>
+          <li>Instructietabblad inbegrepen</li>
+        </ul>
+        <div class="product-price-row">
+          <div>
+            <span class="product-price">€19,95</span>
+            <div class="product-price-label">Eenmalig · direct downloaden</div>
+          </div>
+        </div>
+        <a href="https://euroflux8.gumroad.com/l/stues" class="btn-buy">Direct downloaden →</a>
+      </div>
 
-    <!-- Product 1: Cashflow -->
-    <div class="product-card">
-      <div class="product-icon">📈</div>
-      <h3>Cashflow & Expense Tracker</h3>
-      <p>Maandelijks overzicht van inkomsten, uitgaven en winst. Weet altijd precies wat er binnenkomt en eruit gaat.</p>
-      <ul class="product-features">
-        <li>12 maandtabbladen — één per maand</li>
-        <li>Automatisch jaardashboard met totalen</li>
-        <li>Categorieën voor zakelijke kosten</li>
-        <li>Winst per maand direct zichtbaar</li>
-        <li>Werkt in Excel én Google Sheets</li>
-        <li>Instructietabblad inbegrepen</li>
-      </ul>
-      <div class="product-price">€19,95</div>
-      <div class="product-price-note">Eenmalig · direct downloaden</div>
-      <a href="https://euroflux8.gumroad.com/l/stues" class="btn-product">Direct downloaden →</a>
+      <!-- Periodieke Kosten -->
+      <div class="product-card">
+        <span class="product-icon">🔄</span>
+        <h3>Periodieke Kosten Tracker</h3>
+        <p>Overzicht van alle terugkerende kosten en abonnementen op één plek. Nooit meer vergeten wat er automatisch wordt afgeschreven.</p>
+        <ul class="product-features">
+          <li>Dashboard met alle abonnementen</li>
+          <li>Maandelijkse én jaarlijkse kosten</li>
+          <li>Verloopdatum bijhouden per item</li>
+          <li>Totale jaarkosten in één oogopslag</li>
+          <li>Werkt in Excel én Google Sheets</li>
+          <li>Instructietabblad inbegrepen</li>
+        </ul>
+        <div class="product-price-row">
+          <div>
+            <span class="product-price">€9,95</span>
+            <div class="product-price-label">Eenmalig · direct downloaden</div>
+          </div>
+        </div>
+        <a href="https://euroflux8.gumroad.com/l/glpzf" class="btn-buy">Direct downloaden →</a>
+      </div>
+
+      <!-- AI Prompt Toolkit -->
+      <div class="product-card">
+        <span class="product-badge badge-new">⭐ Nieuw</span>
+        <span class="product-icon">🤖</span>
+        <h3>AI-Prompt Toolkit voor Ondernemers</h3>
+        <p>50 kant-en-klare AI-prompts voor dagelijks ondernemerschap. Kopieer, plak in ChatGPT of Claude — direct bruikbare output.</p>
+        <ul class="product-features">
+          <li>10 prompts Financieel & Cashflow</li>
+          <li>10 prompts Copywriting & Marketing</li>
+          <li>10 prompts Processen & Organisatie</li>
+          <li>10 prompts NIS2 & Compliance</li>
+          <li>10 prompts Klanten & Sales</li>
+        </ul>
+        <div class="product-price-row">
+          <div>
+            <span class="product-price">€24,95</span>
+            <div class="product-price-label">Eenmalig · direct downloaden</div>
+          </div>
+        </div>
+        <a href="https://euroflux8.gumroad.com/l/aiprompt" class="btn-buy btn-buy-accent">Direct downloaden →</a>
+      </div>
+
+      <!-- Schulden Tracker -->
+      <div class="product-card">
+        <span class="product-badge badge-html">🌐 Interactief</span>
+        <span class="product-icon">💰</span>
+        <h3>Schulden Aflossen Tracker</h3>
+        <p>Interactieve tool om zakelijke schulden systematisch af te lossen. Geen spreadsheet — open het bestand in je browser en begin direct.</p>
+        <ul class="product-features">
+          <li>Voeg meerdere schulden toe</li>
+          <li>Visuele voortgangsbalk per schuld</li>
+          <li>Betalingen registreren met één klik</li>
+          <li>Volledige betalingshistorie</li>
+          <li>Werkt offline — geen account nodig</li>
+          <li>Data blijft op je eigen apparaat</li>
+        </ul>
+        <div class="product-price-row">
+          <div>
+            <span class="product-price">€14,95</span>
+            <div class="product-price-label">Eenmalig · direct downloaden</div>
+          </div>
+        </div>
+        <a href="https://euroflux8.gumroad.com/l/schuldtracker" class="btn-buy">Direct downloaden →</a>
+      </div>
+
+      <!-- Bundel -->
+      <div class="product-card">
+        <span class="product-badge badge-bundle">🔥 Bundel</span>
+        <span class="product-icon">⭐</span>
+        <h3>Zakelijke Financiën Bundel</h3>
+        <p>De Cashflow Tracker én de Periodieke Kosten Tracker als compleet pakket. Eenmalig betalen, voor altijd gebruiken.</p>
+        <ul class="product-features">
+          <li>Cashflow & Expense Tracker</li>
+          <li>Periodieke Kosten Tracker</li>
+          <li>Alles in één download</li>
+          <li>Bespaar €4,95 ten opzichte van los</li>
+        </ul>
+        <div class="product-price-row">
+          <div>
+            <span class="product-price">€17,95</span>
+            <span class="product-price-old">€29,90</span>
+            <div class="product-price-label">Eenmalig · direct downloaden</div>
+          </div>
+        </div>
+        <a href="https://euroflux8.gumroad.com/l/hwhfnd" class="btn-buy">Bundel downloaden →</a>
+      </div>
+
     </div>
-
-    <!-- Product 2: Periodieke Kosten -->
-    <div class="product-card">
-      <div class="product-icon">🔄</div>
-      <h3>Periodieke Kosten Tracker</h3>
-      <p>Overzicht van alle terugkerende kosten en abonnementen op één plek. Nooit meer vergeten wat er automatisch wordt afgeschreven.</p>
-      <ul class="product-features">
-        <li>Dashboard met alle abonnementen</li>
-        <li>Maandelijkse én jaarlijkse kosten</li>
-        <li>Verloopdatum bijhouden per item</li>
-        <li>Totale jaarkosten in één oogopslag</li>
-        <li>Werkt in Excel én Google Sheets</li>
-        <li>Instructietabblad inbegrepen</li>
-      </ul>
-      <div class="product-price">€9,95</div>
-      <div class="product-price-note">Eenmalig · direct downloaden</div>
-      <a href="https://euroflux8.gumroad.com/l/glpzf" class="btn-product">Direct downloaden →</a>
-    </div>
-
-    <!-- Product 3: AI Prompt Toolkit -->
-    <div class="product-card featured">
-      <div class="product-badge">⭐ Nieuw</div>
-      <div class="product-icon">🤖</div>
-      <h3>AI-Prompt Toolkit voor Ondernemers</h3>
-      <p>50 kant-en-klare AI-prompts voor dagelijks ondernemerschap. Kopieer, plak in ChatGPT of Claude, vul de haakjes in — direct bruikbare output.</p>
-      <ul class="product-features">
-        <li>10 prompts Financieel & Cashflow</li>
-        <li>10 prompts Copywriting & Marketing</li>
-        <li>10 prompts Processen & Organisatie</li>
-        <li>10 prompts NIS2 & Compliance</li>
-        <li>10 prompts Klanten & Sales</li>
-      </ul>
-      <div class="product-price">€24,95</div>
-      <div class="product-price-note">Eenmalig · direct downloaden</div>
-      <a href="https://euroflux8.gumroad.com/l/stues" class="btn-product">Direct downloaden →</a>
-    </div>
-
-    <!-- Product 4: Bundel -->
-    <div class="product-card">
-      <div class="product-icon">🔥</div>
-      <h3>Zakelijke Financiën Bundel</h3>
-      <p>De Cashflow Tracker én de Periodieke Kosten Tracker als compleet pakket. Eenmalig betalen, voor altijd gebruiken.</p>
-      <ul class="product-features">
-        <li>Cashflow & Expense Tracker</li>
-        <li>Periodieke Kosten Tracker</li>
-        <li>Alles in één download</li>
-        <li>Bespaar €4,95 ten opzichte van los</li>
-      </ul>
-      <div class="product-price">€17,95 <span class="product-price-old">€29,90</span></div>
-      <div class="product-price-note">Eenmalig · direct downloaden</div>
-      <a href="https://euroflux8.gumroad.com/l/hwhfnd" class="btn-product">Bundel downloaden →</a>
-    </div>
-
   </div>
 </section>
 
-<!-- ═══ HOE HET WERKT ═══ -->
-<section class="howitworks" id="hoehetwerkt">
-  <div class="section-label" style="color:var(--green)">Hoe het werkt</div>
-  <h2 class="section-title">Van aankoop naar inzicht<br>in vier stappen</h2>
-  <p class="section-sub" style="margin-bottom:48px">Geen account, geen wachttijd, geen leercurve.</p>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h3>Download direct</h3>
-      <p>Na aankoop ontvang je direct de downloadlink per e-mail. Binnen één minuut heb je het bestand.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h3>Open in Excel of Sheets</h3>
-      <p>Het .xlsx bestand werkt in Microsoft Excel (2016+) én gratis in Google Sheets.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h3>Vul je cijfers in</h3>
-      <p>Volg het instructietabblad. In 15 minuten heb je de eerste maand bijgewerkt.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <h3>Zie het resultaat</h3>
-      <p>Het dashboard berekent automatisch alles. Geen formules, geen gedoe. Alleen overzicht.</p>
+<!-- HOW IT WORKS -->
+<section class="section section-alt" id="hoehetwerkt">
+  <div class="container">
+    <div class="section-label">Hoe het werkt</div>
+    <h2 class="section-title">Van aankoop naar inzicht in vier stappen</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Download direct</h3>
+        <p>Na aankoop ontvang je direct de downloadlink per e-mail. Binnen één minuut heb je het bestand.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Open het bestand</h3>
+        <p>Excel en Google Sheets voor de trackers. De interactieve tool open je gewoon in je browser — dubbelklikken is genoeg.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Vul je cijfers in</h3>
+        <p>Volg het instructietabblad. In 15 minuten heb je de eerste maand bijgewerkt of je eerste schulden ingevoerd.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Zie het resultaat</h3>
+        <p>Alles wordt automatisch berekend. Geen formules, geen gedoe. Alleen overzicht en controle.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ NIS2 STRIP ═══ -->
+<!-- NIS2 -->
 <div class="nis2-strip" id="nis2">
-  <div class="nis2-text">
-    <h2>NIS2 Artikel 21 — wat betekent het voor jouw bedrijf?</h2>
-    <p>Vanaf 2025 geldt de NIS2-richtlijn ook voor MKB-bedrijven die toeleverancier zijn van grotere organisaties. Ketenaansprakelijkheid raakt jou — ook als je niet direct onder NIS2 valt. Weet wat je moet regelen.</p>
-  </div>
-  <div class="nis2-cta">
-    <a href="mailto:onedionconsultancy@gmail.com?subject=NIS2 vraag" class="btn-white" style="background:var(--green);color:white;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.95rem;display:inline-block;">Stel een vraag →</a>
-  </div>
+  <h2>NIS2 Artikel 21 — wat betekent het voor jouw bedrijf?</h2>
+  <p>Vanaf 2025 geldt de NIS2-richtlijn ook voor MKB-bedrijven die toeleverancier zijn van grotere organisaties. Ketenaansprakelijkheid raakt jou — ook als je niet direct onder NIS2 valt. Weet wat je moet regelen.</p>
+  <a href="mailto:onedionconsultancy@gmail.com?subject=NIS2 vraag">Stel een vraag →</a>
 </div>
 
-<!-- ═══ VOOR WIE ═══ -->
-<section class="forwho" id="voor-wie">
-  <div class="section-label">Voor wie</div>
-  <h2 class="section-title">Herken je jezelf?</h2>
-  <p class="section-sub">Deze tools zijn gemaakt voor ondernemers die grip willen — niet voor accountants.</p>
-  <div class="forwho-grid">
-    <div class="forwho-card">
-      <div class="forwho-icon">💼</div>
-      <h3>ZZP'er of freelancer</h3>
-      <p>Je werkt voor meerdere klanten maar weet niet exact wat je netto overhoudt per maand.</p>
-    </div>
-    <div class="forwho-card">
-      <div class="forwho-icon">🏢</div>
-      <h3>Klein MKB (1–10 pers.)</h3>
-      <p>Jij bent directeur én financieel manager. Eenvoudig overzicht is waardevoller dan een ingewikkeld pakket.</p>
-    </div>
-    <div class="forwho-card">
-      <div class="forwho-icon">🚀</div>
-      <h3>Startende ondernemer</h3>
-      <p>Je wilt weten of je businessmodel financieel werkt, zonder meteen een boekhouder te betalen.</p>
-    </div>
-    <div class="forwho-card">
-      <div class="forwho-icon">🔒</div>
-      <h3>Toeleverancier grote org.</h3>
-      <p>Je levert aan grote bedrijven en wil weten wat NIS2 ketenaansprakelijkheid voor jou betekent.</p>
+<!-- AUDIENCE -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Voor wie</div>
+    <h2 class="section-title">Herken je jezelf?</h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <span class="icon">💼</span>
+        <h3>ZZP'er of freelancer</h3>
+        <p>Je werkt voor meerdere klanten maar weet niet exact wat je netto overhoudt per maand.</p>
+      </div>
+      <div class="audience-card">
+        <span class="icon">🏢</span>
+        <h3>Klein MKB (1–10 pers.)</h3>
+        <p>Jij bent directeur én financieel manager. Eenvoudig overzicht is waardevoller dan een ingewikkeld pakket.</p>
+      </div>
+      <div class="audience-card">
+        <span class="icon">🚀</span>
+        <h3>Startende ondernemer</h3>
+        <p>Je wilt weten of je businessmodel financieel werkt, zonder meteen een boekhouder te betalen.</p>
+      </div>
+      <div class="audience-card">
+        <span class="icon">🔒</span>
+        <h3>Toeleverancier grote org.</h3>
+        <p>Je levert aan grote bedrijven en wil weten wat NIS2 ketenaansprakelijkheid voor jou betekent.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ FAQ ═══ -->
-<section class="faq" id="faq">
-  <div class="section-label">Veelgestelde vragen</div>
-  <h2 class="section-title">Geen verrassingen</h2>
-  <div class="faq-list">
-    <details>
-      <summary>Heb ik Microsoft Excel nodig?</summary>
-      <p>Nee. Het bestand werkt ook volledig in Google Sheets, dat gratis beschikbaar is. Upload het .xlsx bestand naar Google Drive en open het in Sheets — alles werkt direct.</p>
-    </details>
-    <details>
-      <summary>Is dit een abonnement?</summary>
-      <p>Nee. Je betaalt één keer en het bestand is voor altijd van jou. Geen maandelijkse kosten, geen verlenging, geen verrassingen.</p>
-    </details>
-    <details>
-      <summary>Hoe snel ontvang ik het bestand?</summary>
-      <p>Direct na betaling ontvang je een e-mail met de downloadlink. Binnen een minuut heb je het bestand op je computer.</p>
-    </details>
-    <details>
-      <summary>Ik ben niet goed met Excel. Lukt dit mij?</summary>
-      <p>Ja. Alles is al klaar opgemaakt. Je vult alleen getallen in — de tool berekent alles automatisch. Een uitgebreid instructietabblad begeleidt je stap voor stap.</p>
-    </details>
-    <details>
-      <summary>Werkt het ook voor een BV?</summary>
-      <p>Ja. De categorieën zijn geschikt voor zowel eenmanszaken als BV's. Je kunt de categorieën ook zelf aanpassen aan je situatie.</p>
-    </details>
-    <details>
-      <summary>Wat is de AI-Prompt Toolkit precies?</summary>
-      <p>Een verzameling van 50 professioneel geschreven prompts voor ChatGPT en Claude. Per categorie: financieel, marketing, processen, NIS2 en sales. Je kopieer de prompt, vult de haakjes in met jouw situatie, en krijgt direct bruikbare output — geen generieke antwoorden meer.</p>
-    </details>
-    <details>
-      <summary>Wat is NIS2 ketenaansprakelijkheid?</summary>
-      <p>Onder de NIS2-richtlijn zijn grote organisaties verplicht om de digitale veiligheid van hun toeleveranciers te controleren. Als jij levert aan zo'n organisatie, kunnen zij eisen dat jij aantoonbaar veilig werkt. Artikel 21 beschrijft de concrete maatregelen. Neem contact op voor een vrijblijvend gesprek.</p>
-    </details>
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="section-label">Veelgestelde vragen</div>
+    <h2 class="section-title">Geen verrassingen</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">Heb ik Microsoft Excel nodig?</div>
+        <div class="faq-answer">Nee. De spreadsheet-tools werken ook volledig in Google Sheets, dat gratis beschikbaar is. Upload het .xlsx bestand naar Google Drive en open het in Sheets — alles werkt direct. De interactieve HTML-tool werkt in elke browser zonder installatie.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is dit een abonnement?</div>
+        <div class="faq-answer">Nee. Je betaalt één keer en het bestand is voor altijd van jou. Geen maandelijkse kosten, geen verlenging, geen verrassingen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Hoe snel ontvang ik het bestand?</div>
+        <div class="faq-answer">Direct na betaling ontvang je een e-mail met de downloadlink. Binnen een minuut heb je het bestand op je computer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Ik ben niet goed met Excel. Lukt dit mij?</div>
+        <div class="faq-answer">Ja. Alles is al klaar opgemaakt. Je vult alleen getallen in — de tool berekent alles automatisch. Een uitgebreid instructietabblad begeleidt je stap voor stap.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Hoe werkt de interactieve Schulden Tracker?</div>
+        <div class="faq-answer">Je ontvangt een .zip bestand. Pak dit uit, dubbelklik op het HTML-bestand — het opent direct in je browser. Geen installatie, geen account, geen internet nodig. Je data wordt lokaal opgeslagen op jouw apparaat.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Werkt het ook voor een BV?</div>
+        <div class="faq-answer">Ja. De categorieën zijn geschikt voor zowel eenmanszaken als BV's. Je kunt de categorieën ook zelf aanpassen aan je situatie.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Wat is de AI-Prompt Toolkit precies?</div>
+        <div class="faq-answer">Een verzameling van 50 professioneel geschreven prompts voor ChatGPT en Claude. Per categorie: financieel, marketing, processen, NIS2 en sales. Je kopieert de prompt, vult de haakjes in met jouw situatie, en krijgt direct bruikbare output — geen generieke antwoorden meer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Wat is NIS2 ketenaansprakelijkheid?</div>
+        <div class="faq-answer">Onder de NIS2-richtlijn zijn grote organisaties verplicht om de digitale veiligheid van hun toeleveranciers te controleren. Als jij levert aan zo'n organisatie, kunnen zij eisen dat jij aantoonbaar veilig werkt. Artikel 21 beschrijft de concrete maatregelen. Neem contact op voor een vrijblijvend gesprek.</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ═══ CTA BOTTOM ═══ -->
-<section class="cta-bottom">
+<!-- CTA -->
+<section class="cta-section">
   <h2>Klaar voor overzicht?</h2>
   <p>Eenmalig betalen. Direct downloaden. Nooit meer gokken waar je geld naartoe gaat.</p>
   <div class="cta-buttons">
-    <a href="https://euroflux8.gumroad.com/l/stues" class="btn-white">Cashflow Tracker — €19,95</a>
-    <a href="https://euroflux8.gumroad.com/l/hwhfnd" class="btn-white">Bundel — €17,95</a>
-    <a href="https://euroflux8.gumroad.com/l/stues" class="btn-white-outline">AI-Prompt Toolkit — €24,95</a>
+    <a href="https://euroflux8.gumroad.com/l/stues" class="cta-btn">Cashflow Tracker — €19,95</a>
+    <a href="https://euroflux8.gumroad.com/l/hwhfnd" class="cta-btn">Bundel — €17,95</a>
+    <a href="https://euroflux8.gumroad.com/l/aiprompt" class="cta-btn accent">AI-Prompt Toolkit — €24,95</a>
+    <a href="https://euroflux8.gumroad.com/l/schuldtracker" class="cta-btn">Schulden Tracker — €14,95</a>
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-brand">Onedion<span>.</span></div>
-  <p>© 2026 Onedion Consultancy · <a href="mailto:onedionconsultancy@gmail.com">onedionconsultancy@gmail.com</a> · Fijnaart, Noord-Brabant</p>
-  <p><a href="#producten">Tools</a> · <a href="#nis2">NIS2</a> · <a href="#faq">FAQ</a></p>
+  <p>© 2026 Onedion Consultancy · Fijnaart, Noord-Brabant</p>
+  <div class="footer-links">
+    <a href="#producten">Tools</a>
+    <a href="#nis2">NIS2</a>
+    <a href="#faq">FAQ</a>
+    <a href="mailto:onedionconsultancy@gmail.com">onedionconsultancy@gmail.com</a>
+  </div>
 </footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
 
 </body>
 </html>
