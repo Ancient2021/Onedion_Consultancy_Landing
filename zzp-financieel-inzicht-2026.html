@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZZP Financieel Inzicht 2026 — Weet wat je kunt uitbetalen | Onedion</title>
+  <meta name="description" content="Hoeveel moet je reserveren voor belasting als ZZP'er in 2026? Bereken je netto inkomen, BTW-afdracht en belastingreservering automatisch. Excel tool. Eenmalig €19." />
+  <meta name="keywords" content="ZZP belasting reserveren 2026, hoeveel reserveren ZZP, ZZP financieel overzicht, zelfstandigenaftrek 2026, ZZP belasting berekenen, Excel ZZP tool" />
+  <meta property="og:title" content="ZZP Financieel Inzicht 2026 — Weet elke maand wat je kunt uitbetalen" />
+  <meta property="og:description" content="Excel tool voor ZZP'ers. Vul je omzet in, zie direct wat je reserveert voor belasting en wat je netto overhoudt. Bijgewerkt voor 2026-tarieven." />
+  <meta property="og:image" content="ZZP_Cover_1200x800.png" />
+  <link rel="canonical" href="https://ancient2021.github.io/Onedion_Consultancy_Landing/zzp-financieel-inzicht-2026.html" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:    #1F3864;
+      --mid:     #2F5496;
+      --accent:  #2E75B6;
+      --light:   #D6E4F7;
+      --green:   #375623;
+      --green-bg:#E2EFDA;
+      --white:   #ffffff;
+      --grey:    #F4F6FB;
+      --text:    #1a1a2e;
+    }
+
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: #fff; }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--dark);
+      padding: 14px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .logo { color: white; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
+    nav .logo span { color: #5BA3E8; }
+    nav a.nav-cta {
+      background: var(--accent);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .9rem;
+      transition: background .2s;
+    }
+    nav a.nav-cta:hover { background: #1a5fa0; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #0D1A3A 100%);
+      color: white;
+      padding: 80px 5% 70px;
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hero-text { flex: 1; min-width: 280px; }
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: #5BA3E8; }
+    .hero p {
+      font-size: 1.15rem;
+      color: #C8DCF5;
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: #27AE60;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .2s, transform .1s;
+    }
+    .hero-cta:hover { background: #1e8449; transform: translateY(-1px); }
+    .hero-cta small { display: block; font-size: .75rem; font-weight: 400; opacity: .85; margin-top: 3px; }
+    .hero-visual { flex: 0 0 340px; }
+    .hero-visual img { width: 100%; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+
+    /* ── SOCIAL PROOF STRIP ── */
+    .strip {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 14px 5%;
+      font-size: .95rem;
+    }
+    .strip strong { font-weight: 700; }
+
+    /* ── PROBLEEM ── */
+    .section { padding: 70px 5%; }
+    .section.grey { background: var(--grey); }
+    .section h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .section h2 span { color: var(--accent); }
+    .section p { font-size: 1.05rem; line-height: 1.8; color: #444; max-width: 680px; }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .problem-card {
+      background: white;
+      border: 1px solid #DDE6F5;
+      border-left: 4px solid #E74C3C;
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .problem-card .icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .problem-card h3 { font-size: 1rem; color: var(--dark); margin-bottom: 8px; }
+    .problem-card p { font-size: .9rem; color: #666; line-height: 1.6; }
+
+    /* ── HOE HET WERKT ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .step { text-align: center; }
+    .step .num {
+      width: 52px; height: 52px;
+      background: var(--accent);
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step h3 { font-size: 1rem; color: var(--dark); margin-bottom: 8px; }
+    .step p { font-size: .9rem; color: #555; line-height: 1.6; }
+
+    /* ── FEATURES ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .feature-card {
+      background: white;
+      border: 1px solid #DDE6F5;
+      border-top: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 28px;
+    }
+    .feature-card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .feature-card h3 { font-size: 1rem; color: var(--dark); margin-bottom: 8px; }
+    .feature-card p { font-size: .9rem; color: #555; line-height: 1.65; }
+
+    /* ── DBA SECTION ── */
+    .dba-section {
+      background: linear-gradient(135deg, #1a0a0a 0%, #2d0f0f 100%);
+      color: white;
+      padding: 60px 5%;
+      text-align: center;
+    }
+    .dba-section h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 16px; }
+    .dba-section p { color: #FFCDD2; font-size: 1.05rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.7; }
+    .dba-stat {
+      display: inline-block;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 10px;
+      padding: 20px 32px;
+      margin: 8px;
+    }
+    .dba-stat .num { font-size: 2.4rem; font-weight: 700; color: #FF8A80; }
+    .dba-stat .label { font-size: .85rem; color: #FFCDD2; margin-top: 4px; }
+
+    /* ── PRIJS ── */
+    .pricing {
+      background: var(--grey);
+      padding: 70px 5%;
+      text-align: center;
+    }
+    .price-card {
+      display: inline-block;
+      background: white;
+      border: 2px solid var(--accent);
+      border-radius: 16px;
+      padding: 48px 56px;
+      max-width: 480px;
+      width: 100%;
+    }
+    .price-card .price {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1;
+      margin: 16px 0 6px;
+    }
+    .price-card .price-sub { color: #666; font-size: .95rem; margin-bottom: 28px; }
+    .price-card ul {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .price-card ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #EEF2FA;
+      font-size: .95rem;
+      color: #444;
+    }
+    .price-card ul li::before { content: "✓  "; color: #27AE60; font-weight: 700; }
+    .buy-btn {
+      display: block;
+      background: #27AE60;
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .buy-btn:hover { background: #1e8449; }
+    .buy-btn small { display: block; font-size: .8rem; font-weight: 400; opacity: .85; margin-top: 4px; }
+    .guarantee {
+      margin-top: 20px;
+      font-size: .85rem;
+      color: #888;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 680px; margin: 40px auto 0; }
+    .faq-item { border-bottom: 1px solid #DDE6F5; padding: 20px 0; }
+    .faq-item h3 { font-size: 1rem; color: var(--dark); margin-bottom: 8px; }
+    .faq-item p { font-size: .9rem; color: #555; line-height: 1.7; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: #8BB8E8;
+      text-align: center;
+      padding: 32px 5%;
+      font-size: .85rem;
+    }
+    footer a { color: #5BA3E8; text-decoration: none; }
+    footer .disclaimer {
+      margin-top: 12px;
+      font-size: .78rem;
+      color: #556080;
+      max-width: 600px;
+      margin: 12px auto 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 48px 5%; }
+      .hero-visual { display: none; }
+      .price-card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">ONE<span>DION</span></div>
+  <a href="#kopen" class="nav-cta">Koop nu — €19</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="badge">Onedion · Excel Tool · 2026</span>
+    <h1>Weet elke maand wat je<br /><span>kunt uitbetalen</span> als ZZP'er</h1>
+    <p>
+      Vul je maandelijkse omzet in en zie direct hoeveel je reserveert voor belasting,
+      wat je aan BTW afdraagt en wat er netto overblijft. Bijgewerkt op alle 2026-tarieven.
+      Geen abonnement. Geen boekhoudpakket.
+    </p>
+    <a href="#kopen" class="hero-cta">
+      Download de tool — €19
+      <small>Eenmalig · Directe download · Excel</small>
+    </a>
+  </div>
+  <div class="hero-visual">
+    <img src="ZZP_Cover_1200x800.png" alt="ZZP Financieel Inzicht 2026 Excel tool screenshot" />
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <strong>Nieuw in 2026:</strong> zelfstandigenaftrek gedaald van €2.470 naar €1.200 — veel ZZP'ers reserveren daardoor te weinig. Deze tool rekent het automatisch voor je uit.
+</div>
+
+<!-- PROBLEEM -->
+<section class="section">
+  <h2>Herken jij dit?</h2>
+  <p>Elke ZZP'er heeft dezelfde vragen. Maar nergens krijg je een concreet, persoonlijk antwoord.</p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="icon">😰</div>
+      <h3>"Hoeveel moet ik reserveren?"</h3>
+      <p>30%? 35%? 40%? De antwoorden online zijn algemeen. Wat telt is jóuw situatie, jóuw omzet, jóuw aftrekposten.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">😱</div>
+      <h3>Belastingaanslag die je niet verwachtte</h3>
+      <p>Je had gewoon geen overzicht. En dan komt er ineens een aanslag van duizenden euro's die je niet had liggen.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">🤷</div>
+      <h3>"Mag ik dit uitgeven?"</h3>
+      <p>Je weet niet hoeveel van je rekening echt van jou is en hoeveel al gereserveerd zou moeten zijn voor belasting en BTW.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">💸</div>
+      <h3>Boekhoudpakket voelt als overkill</h3>
+      <p>Voor €15–25 per maand een volledig pakket? Terwijl je het eigenlijk maar voor één ding nodig hebt: weten waar je aan toe bent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOE HET WERKT -->
+<section class="section grey">
+  <h2>Hoe het werkt</h2>
+  <p>Drie stappen. Twee minuten per maand.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Vul je situatie in</h3>
+      <p>Naam, BTW-tarief, verwachte jaaromzet. Eén keer. De belastingparameters voor 2026 staan er al in.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Voer elke maand je omzet in</h3>
+      <p>Omzet en kosten per maand invullen. Dat is alles. De tool berekent de rest automatisch.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Zie wat je kunt uitbetalen</h3>
+      <p>Het dashboard toont direct: netto uitbetaalbaar, belasting gereserveerd, BTW per kwartaal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <h2>Wat er <span>in zit</span></h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="icon">⚙️</div>
+      <h3>Instellingen — jouw situatie</h3>
+      <p>BTW-tarief, verwachte omzet, zakelijke kosten. De tool past alle berekeningen aan op jouw persoonlijke situatie.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📋</div>
+      <h3>Maandinvoer</h3>
+      <p>Per maand je omzet en kosten invullen. Automatisch: BTW-afdracht, belastingreservering, netto uitbetaalbaar en kwartaalcheck.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📊</div>
+      <h3>Dashboard</h3>
+      <p>Jaarprognose naast werkelijke cijfers. In één oogopslag zie je of je op schema ligt en wat je kunt verwachten.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🧾</div>
+      <h3>2026-tarieven ingebakken</h3>
+      <p>Zelfstandigenaftrek €1.200, MKB-winstvrijstelling 12,7%, alle belastingschijven. Bijgewerkt op Belastingdienst 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DBA SECTION -->
+<section class="dba-section">
+  <h2>🚨 Wet DBA maakt financieel inzicht urgenter dan ooit</h2>
+  <p>
+    Door DBA-handhaving hebben veel ZZP'ers wisselender inkomen gekregen.
+    Juist dan is het cruciaal te weten wat je kunt uitbetalen en wat je moet reserveren.
+  </p>
+  <div>
+    <div class="dba-stat">
+      <div class="num">50%</div>
+      <div class="label">van ZZP'ers loopt opdrachten mis</div>
+    </div>
+    <div class="dba-stat">
+      <div class="num">58%</div>
+      <div class="label">weet niet of ze DBA-compliant zijn</div>
+    </div>
+    <div class="dba-stat">
+      <div class="num">1 op 5</div>
+      <div class="label">overweegt te stoppen</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIJS -->
+<section class="pricing" id="kopen">
+  <h2>Eén keer kopen. Altijd gebruiken.</h2>
+  <p style="color:#666; margin: 12px auto 40px; max-width:500px;">Geen abonnement. Geen maandelijkse kosten. Eenmalig €19 en je hebt de tool voor altijd.</p>
+  <div class="price-card">
+    <div class="badge" style="background:var(--accent);">ZZP Financieel Inzicht 2026</div>
+    <div class="price">€19</div>
+    <div class="price-sub">Eenmalig · Directe download · Excel (.xlsx)</div>
+    <ul>
+      <li>3 sheets: Instellingen, Maandinvoer, Dashboard</li>
+      <li>Bijgewerkt op 2026-belastingtarieven</li>
+      <li>Zelfstandigenaftrek €1.200 ingebakken</li>
+      <li>BTW-kwartaalcheck automatisch</li>
+      <li>Werkt in Excel én LibreOffice</li>
+      <li>Geen abonnement, geen account, geen app</li>
+    </ul>
+    <a href="https://payhip.com/b/CjaNY" class="buy-btn" target="_blank" rel="noopener">
+      Koop nu voor €19
+      <small>Veilig betalen via Payhip · Directe download</small>
+    </a>
+    <p class="guarantee">🔒 Veilige betaling &nbsp;·&nbsp; Directe download na betaling</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <h2 style="text-align:center;">Veelgestelde vragen</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>Voor wie is dit product?</h3>
+      <p>Voor ZZP'ers en freelancers met een eenmanszaak (IB-ondernemer) die geen volledig boekhoudpakket willen maar wel maandelijks willen weten waar ze financieel aan toe zijn.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Werkt het ook als ik BTW-vrijgesteld ben?</h3>
+      <p>Ja. Je stelt het BTW-tarief in op 0% en de tool past alle berekeningen aan. De belastingreservering werkt ongeacht je BTW-situatie.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Heb ik een abonnement nodig?</h3>
+      <p>Nee. Je betaalt eenmalig €19 en download het Excel-bestand direct. Geen maandelijkse kosten, geen account aanmaken.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Werkt het in LibreOffice of Google Sheets?</h3>
+      <p>Het bestand is geoptimaliseerd voor Microsoft Excel. LibreOffice Calc werkt ook. Google Sheets heeft beperkte compatibiliteit met sommige formules.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is dit een vervanging voor een accountant?</h3>
+      <p>Nee. Dit is een hulpmiddel voor dagelijks inzicht, geen officieel belastingadvies. Voor je jaarlijkse aangifte blijft een accountant of belastingadviseur aangeraden.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Wordt de tool bijgewerkt als belastingtarieven veranderen?</h3>
+      <p>De 2026-versie is bijgewerkt op de actuele tarieven. Voor 2027 verschijnt een bijgewerkte versie. Bestaande kopers ontvangen korting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div><strong>Onedion Consultancy BV</strong> &nbsp;·&nbsp; <a href="https://onedion.nl">onedion.nl</a></div>
+  <div class="disclaimer">
+    Dit product is een hulpmiddel en geen officieel belastingadvies. Raadpleeg altijd een belastingadviseur voor jouw persoonlijke situatie.
+    Tarieven gebaseerd op Belastingdienst.nl en KVK.nl, april 2026.
+  </div>
+</footer>
+
+</body>
+</html>
